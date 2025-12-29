@@ -41,7 +41,7 @@ public:
                     return;
                 }
 
-                if (keyEvent.accepted() || keyEvent.filtered()) {
+                if (keyEvent.filtered()) {
                     return;
                 }
 
