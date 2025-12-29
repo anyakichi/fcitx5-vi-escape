@@ -14,11 +14,11 @@ namespace {
 
 static bool isEscOrCtrlLBracket(const Key &k)
 {
-    if (k.sym() == FcitxKey_Escape) {
+    if (k.states() == KeyState::NoState && k.sym() == FcitxKey_Escape) {
         return true;
     }
 
-    if ((k.states() & KeyState::Ctrl) && k.sym() == FcitxKey_bracketleft) {
+    if (k.states() == KeyState::Ctrl && k.sym() == FcitxKey_bracketleft) {
         return true;
     }
 
